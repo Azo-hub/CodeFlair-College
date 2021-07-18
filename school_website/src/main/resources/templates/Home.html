@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments::html_head" />
+
+
+<title>CodeFlair College</title>
+
+<link th:href="@{/CSS/home.css}" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+	<marquee>
+		<p>
+			<strong>Website development is on-going.</strong>
+		</p>
+	</marquee>
+
+	<header th:replace="fragments::menubar"> </header>
+
+	<!-- Start of carousel -->
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+
+				<div id="carouselExampleIndicators" class="carousel slide"
+					data-bs-ride="carousel">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#carouselExampleIndicators"
+							data-bs-slide-to="0" class="active" aria-current="true"
+							aria-label="Slide 1"></button>
+						<button type="button" data-bs-target="#carouselExampleIndicators"
+							data-bs-slide-to="1" aria-label="Slide 2"></button>
+						<button type="button" data-bs-target="#carouselExampleIndicators"
+							data-bs-slide-to="2" aria-label="Slide 3"></button>
+						<button type="button" data-bs-target="#carouselExampleIndicators"
+							data-bs-slide-to="3" aria-label="Slide 4"></button>
+					</div>
+
+					<div class="carousel-inner">
+
+						<div class="carousel-item active">
+							<img th:src="@{/StaticImages/school_carousel_1.jpg}"
+								style="max-height: 400px !important; width: 100% !important;"
+								class="d-block w-100 card-img" alt="...">
+						</div>
+
+						<div class="carousel-item">
+							<img th:src="@{/StaticImages/school_carousel_2.jpg}"
+								style="max-height: 400px !important; width: 100% !important;"
+								class="d-block w-100 card-img" alt="...">
+						</div>
+
+						<div class="carousel-item">
+							<img th:src="@{/StaticImages/school_carousel_3.jpg}"
+								style="max-height: 400px !important; width: 100% !important;"
+								class="d-block w-100 card-img" alt="...">
+						</div>
+
+						<div class="carousel-item">
+							<img th:src="@{/StaticImages/school_carousel_4.jpg}"
+								style="max-height: 400px !important; width: 100% !important;"
+								class="d-block w-100 card-img" alt="...">
+						</div>
+
+					</div>
+
+					<button class="carousel-control-prev" type="button"
+						data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+
+					<button class="carousel-control-next" type="button"
+						data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<!-- End of carousel -->
+
+
+	<!-- Welcome Note and Quick Link section -->
+
+	<div class="container my-5">
+
+		<div class="row">
+
+			<div class="col-md-8">
+
+				<h2 class="custom_font_color_1">
+					<strong>Welcome Note</strong>
+				</h2>
+				<br />
+
+				<div class="row">
+
+					<div class="col-sm-6">
+
+						<img th:src="@{/StaticImages/school_carousel_4.jpg}"
+							height="220px" width="250px" class="card-img"
+							alt="Principal's Image">
+
+					</div>
+
+					<div class="col-sm-6">
+
+						<p class="custom_font_color_1">CodeFlair College is an
+							independent co-educational boarding and day school for children
+							aged 10years and above. At CodeFlair College, we offer a broad
+							and balanced education within a friendly, caring and happy
+							environment.</p>
+
+						<p class="custom_font_color_1">
+							Azeez R.O. <br />Director
+						</p>
+
+						<a class="btn" style="color: white; background-color: #488738;">Read
+							More </a>
+
+					</div>
+
+				</div>
+
+				<hr />
+
+			</div>
+
+
+
+
+			<div class="col-md-4 my-4 py-5 ps-5">
+
+				<div class="card" style="width: 100%;">
+					<div class="card-header"
+						style="color: white; background-color: #488738;">Quick Links
+					</div>
+
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item custom_font_color_1">Fee Payment</li>
+						<li class="list-group-item custom_font_color_1">Admission
+							Form</li>
+						<li class="list-group-item card-header"
+							style="color: white; background-color: #488738;">Student's
+							Portal</li>
+						<li class="list-group-item custom_font_color_1">Login</li>
+						<li class="list-group-item custom_font_color_1">Registration</li>
+					</ul>
+				</div>
+
+
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- End of Welcome Note and Quick Link section -->
+
+
+	<!-- Start of About Us and News & Events section -->
+
+	<div class="container my-5">
+
+		<div class="row">
+
+			<div class="col-md-8">
+
+				<div class="card-body">
+
+					<h2 class="card-title custom_font_color_1">
+						<strong>About Us</strong>
+					</h2>
+					<br />
+
+					<div class="row">
+
+						<div class="col-sm-6">
+
+							<div id="carouselExampleIndicators"
+								class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+								<div class="carousel-inner">
+
+									<div class="carousel-item active">
+										<img th:src="@{/StaticImages/school_aboutus_1.jpg}"
+											style="max-height: 400px !important; width: 100% !important;"
+											class="d-block w-100 card-img" alt="...">
+									</div>
+
+									<div class="carousel-item">
+										<img th:src="@{/StaticImages/school_aboutus_2.jpg}"
+											style="max-height: 400px !important; width: 100% !important;"
+											class="d-block w-100 card-img" alt="...">
+									</div>
+
+									<div class="carousel-item">
+										<img th:src="@{/StaticImages/school_aboutus_3.jpg}"
+											style="max-height: 400px !important; width: 100% !important;"
+											class="d-block w-100 card-img" alt="...">
+									</div>
+
+									<div class="carousel-item">
+										<img th:src="@{/StaticImages/school_aboutus_4.jpg}"
+											style="max-height: 400px !important; width: 100% !important;"
+											class="d-block w-100 card-img" alt="...">
+									</div>
+
+									<div class="carousel-item">
+										<img th:src="@{/StaticImages/school_aboutus_5.jpg}"
+											style="max-height: 400px !important; width: 100% !important;"
+											class="d-block w-100 card-img" alt="...">
+									</div>
+
+								</div>
+
+							</div>
+
+
+						</div>
+
+						<div class="col-sm-6">
+
+							<p class="card-text custom_font_color_1">CodeFlair College is
+								an independent co-educational boarding and day school for
+								children aged 10 years and above. At CodeFliar College, we offer
+								a broad and balanced education within a friendly, caring and
+								happy environment. At CodeFlair College the curriculum offered
+								is based on the English national curriculum with good reference
+								made to indigenous learning experience.</p>
+							<p class="card-text custom_font_color_1">In addition, our
+								approach to education creates a strong base for future
+								development. This encourages a culture of independent learning
+								that challenges students to accept greater responsibility for
+								their learning. At CodeFlair College, our highly personalised
+								learner system provides a distinct process, through which
+								student’s strength, potential, ability and interest are
+								identified and harnessed.</p>
+							<a class="btn" style="color: white; background-color: #488738;">Read
+								More </a>
+
+						</div>
+
+					</div>
+
+
+				</div>
+
+
+			</div>
+
+			<div class="col-md-4 my-4 py-5 ps-5">
+
+				<div class="card" style="width: 100%; height: 400px;">
+					<div class="card-header"
+						style="color: white; background-color: #488738;">News and
+						Events</div>
+					<marquee direction="up" width="95%" height="90%" scrollamount="2">
+
+						<ul>
+							<li class="custom_font_color_1 list-group-item-action mb-5">
+								<h5>
+									<a><strong>PhD journeys of a 71-year-old Grandma
+											and an ‘okada rider’</strong></a>
+								</h5>
+
+								<p>
+									<a style="text-decoration: none; color: inherit;"
+										th:href="@{https://thenationonlineng.net/phd-journeys-of-a-71-year-old-grandma-and-an-okada-rider/}">
+										A septuagenarian and a 37-year-old biologist were among the
+										148 students who graduated with the Doctor of Philosophy (PhD)
+										during the 51st convocation of the University of Lagos
+										(UNILAG). <strong>KOFOWOROLA BELO-OSAGIE</strong> reports on
+										their academic journey. <strong>Read More...</strong>
+									</a>
+								</p>
+
+							</li>
+
+							<li class="custom_font_color_1 list-group-item-action my-5">
+								<h5>
+									<a><strong>VC to varsities: lay emphasis on
+											practical skills acquisition</strong></a>
+								</h5>
+
+								<p>
+									<a style="text-decoration: none; color: inherit;"
+										th:href="@{https://thenationonlineng.net/vc-to-varsities-lay-emphasis-on-practical-skills-acquisition/}">Vice
+										Chancellor of Al-Hikmah University, Prof. Noah Yusuf, has
+										urged university administrators to de-emphasise paper
+										certification.<strong> Read More...</strong>
+									</a>
+								</p>
+							</li>
+
+							<li class="custom_font_color_1 list-group-item-action my-5">
+								<h5>
+									<a><strong>InterswitchSPAK shortlists 81 pupils
+											for second stage</strong></a>
+								</h5>
+
+								<p>
+									<a style="text-decoration: none; color: inherit;"
+										th:href="@{https://thenationonlineng.net/interswitchspak-shortlists-81-pupils-for-second-stage/}">Interswitch
+										Group, the organisers of InterswitchSPAK National Science
+										competition, has announced the release of the results of the
+										National Qualifying Examination for the InterswitchSPAK
+										Nigeria 3.0 which held nationwide on Friday, May 28 and
+										Saturday, May 29, 2021.<strong> Read More...</strong>
+									</a>
+								</p>
+
+							</li>
+						</ul>
+
+					</marquee>
+
+				</div>
+
+			</div>
+
+
+		</div>
+
+	</div>
+
+	<!-- End of About Us and News & Events section -->
+
+
+
+
+	<!-- Start of Blockquote section -->
+
+	<div class="container-fluid my-5 py-5"
+		style="background-color: #488738">
+
+		<div class="row">
+
+			<div class="col-md-12">
+
+				<figure class="text-center">
+					<blockquote class="blockquote">
+						<p style="color: white; font-size: 25px;">An Investment in
+							Knowledge pays the best Interest.</p>
+					</blockquote>
+					<figcaption class="blockquote-footer" style="color: white;">
+						<cite title="Source Title">Benjamin Franklin</cite>
+					</figcaption>
+				</figure>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- End of Blockquote section -->
+
+
+
+
+
+	<!-- Start of About Us and News & Events section -->
+
+	<div class="container my-5">
+
+		<div class="row">
+
+			<div class="col-md-12 custom_font_color_1">
+
+				<h2>
+					<strong>News and Events</strong>
+				</h2>
+				<br />
+
+			</div>
+
+		</div>
+
+		<div class="row">
+
+			<div class="col-md-4 custom_font_color_1">
+
+				<h5>
+					<a><strong>PhD journeys of a 71-year-old Grandma and
+							an ‘okada rider’</strong></a>
+				</h5>
+
+				<p>
+					<a style="text-decoration: none; color: inherit;"
+						th:href="@{https://thenationonlineng.net/phd-journeys-of-a-71-year-old-grandma-and-an-okada-rider/}">
+						A septuagenarian and a 37-year-old biologist were among the 148
+						students who graduated with the Doctor of Philosophy (PhD) during
+						the 51st convocation of the University of Lagos (UNILAG). <strong>KOFOWOROLA
+							BELO-OSAGIE</strong> reports on their academic journey. <strong>Read
+							More...</strong>
+					</a>
+				</p>
+
+
+			</div>
+
+			<div class="col-md-4 custom_font_color_1">
+
+				<h5>
+					<a><strong>VC to varsities: lay emphasis on practical
+							skills acquisition</strong></a>
+				</h5>
+
+				<p>
+					<a style="text-decoration: none; color: inherit;"
+						th:href="@{https://thenationonlineng.net/vc-to-varsities-lay-emphasis-on-practical-skills-acquisition/}">Vice
+						Chancellor of Al-Hikmah University, Prof. Noah Yusuf, has urged
+						university administrators to de-emphasise paper certification.<strong>
+							Read More...</strong>
+					</a>
+				</p>
+
+
+			</div>
+
+			<div class="col-md-4 custom_font_color_1">
+
+				<h5>
+					<a><strong>InterswitchSPAK shortlists 81 pupils for
+							second stage</strong></a>
+				</h5>
+
+				<p>
+					<a style="text-decoration: none; color: inherit;"
+						th:href="@{https://thenationonlineng.net/interswitchspak-shortlists-81-pupils-for-second-stage/}">Interswitch
+						Group, the organisers of InterswitchSPAK National Science
+						competition, has announced the release of the results of the
+						National Qualifying Examination for the InterswitchSPAK Nigeria
+						3.0 which held nationwide on Friday, May 28 and Saturday, May 29,
+						2021.<strong> Read More...</strong>
+					</a>
+				</p>
+
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- End of About Us and News & Events section -->
+
+
+
+	<footer th:replace="fragments::html_foot"> </footer>
+</body>
+
+</html>
