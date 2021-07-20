@@ -39,3 +39,31 @@ footer {
 	
 }
 */
+
+
+/* Medium (md) devices (tablets, 768px down) */
+@media (max-width: 767.98px) {
+
+	.quickLink_display {
+		display:none;
+	}
+	
+	
+}
+
+
+/* Not display at media larger than mobile phone & tablet */
+@media (min-width:767.99px) {
+	
+	.quickLink_display_mobile_and_tablet {
+	
+		display:none;
+	
+	}
+	
+	.custom_navbar_font_size {
+	
+		font-size: 40px !important;
+	}
+	
+}
