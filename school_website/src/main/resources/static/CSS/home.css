@@ -1,30 +1,22 @@
 @charset "ISO-8859-1";
 
-body{
-	overflow-x:hidden !important;
-	
+body {
+	overflow-x: hidden !important;
 	background-color: #dedede !important;
 	
-	/*font-family: Georgia,Times,serif; */
-	font-family:Montserrat, sans-serif !important;
-	margin-left:0px;
-	margin-right:0px;
-	
+	font-family: Montserrat, sans-serif !important;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
 footer {
-	
 	background-color: #488738;
 	padding: 30px 0px 30px 0px;
-	/*font-family: Georgia,Times,serif; */
-	font-family:Montserrat, sans-serif !important;
 	
-	overflow-x:hidden !important;
-	overflow-y:hidden !important;
-	
-	bottom:0;
-	width:100%;
-	
+	font-family: Montserrat, sans-serif !important;
+	overflow-x: hidden !important;
+	overflow-y: hidden !important;
+	width: 100%;
 }
 
 .custom_font_color_1 {
@@ -40,30 +32,19 @@ footer {
 }
 */
 
-
 /* Medium (md) devices (tablets, 768px down) */
-@media (max-width: 767.98px) {
-
+@media ( max-width : 767.98px) {
 	.quickLink_display {
-		display:none;
+		display: none;
 	}
-	
-	
 }
 
-
 /* Not display at media larger than mobile phone & tablet */
-@media (min-width:767.99px) {
-	
+@media ( min-width :767.99px) {
 	.quickLink_display_mobile_and_tablet {
-	
-		display:none;
-	
+		display: none;
 	}
-	
 	.custom_navbar_font_size {
-	
 		font-size: 40px !important;
 	}
-	
 }
