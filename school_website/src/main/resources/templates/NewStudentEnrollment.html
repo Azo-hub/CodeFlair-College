@@ -14,49 +14,56 @@
 
 	<header th:replace="fragments::menubar"> </header>
 
-	<form>
-
+	<form class = "mx-3 my-3" th:action="@{/new_students_enrollment}" method="post">
+		
+		<h1 align = "center"><strong>New Students Registration Details</strong></h1><br/>
+			
 		<fieldset>
+	
 
-			<legend>Personal Information</legend>
+			<legend><strong>Personal Information</strong></legend>
 
-			<div class="container my-5">
+			<div class="container mt-1 mb-5">
 			
 				<div class = "row my-2">
 				
 					<div class = "col-md-4">
 					
-						<img src = "" />
+						<img th:src = "@{/images}" height = "200px" width = "200px" />
 					
 					</div>
 				
 				</div>
 
 				<div class="row my-2 gy-3">
+				
+					
 
 					<div class="col-md-4" style = "display:flex; 
 						flex-direction:row; ">
-					
-						<label style = "min-width:100px;">First Name</label>
-						<input type = "text" style = "min-width:200px; flex-grow:1; flex-shrink:1;
-						flex-basis:auto;"/>
-					
-					</div>
-					
-					<div class="col-md-4" style = "display:flex; 
-						flex-direction:row; ">
-					
-						<label style = "min-width:100px;">Last Name</label>
-						<input type = "text" style = "min-width:200px; flex-grow:1; flex-shrink:1;
-						flex-basis:auto;"/>
+						<label for = "firstName" style = "min-width:100px;">First Name</label>
+						<input type = "text" id="firstName" name="firstName" 
+							style = "min-width:200px; flex-grow:1; flex-shrink:1;
+							flex-basis:auto;"/>
 					
 					</div>
 					
 					<div class="col-md-4" style = "display:flex; 
 						flex-direction:row; ">
 					
-						<label style = "min-width:110px;">Other Name</label>
-						<input type = "text" style = "min-width:185px; flex-grow:1; flex-shrink:1;
+						<label for = "lastName" style = "min-width:100px;">Last Name</label>
+						<input type = "text" id="lastName" name="lastName" 
+							style = "min-width:200px; flex-grow:1; flex-shrink:1;
+							flex-basis:auto;"/>
+					
+					</div>
+					
+					<div class="col-md-4" style = "display:flex; 
+						flex-direction:row; ">
+					
+						<label for = "otherName" style = "min-width:110px;">Other Name</label>
+						<input type = "text" id="otherName" name="otherName" 
+						style = "min-width:185px; flex-grow:1; flex-shrink:1;
 						flex-basis:auto;"/>
 					
 					</div>
@@ -69,17 +76,27 @@
 					<div class="col-md-4" style = "display:flex; 
 						flex-direction:row; ">
 					
-						<label style = "min-width:100px;">Student's ID</label>
-						<input type = "text" style = "min-width:200px; flex-grow:1; flex-shrink:1;
-						flex-basis:auto;"/>
+						<label for = "class" style = "min-width:100px;">Class</label>
+						<select name = "class" id = "class" style = "min-width:190px; flex-grow:1; flex-shrink:1;
+							flex-basis:auto;">
+						
+							<option th:value = "JSS1">JSS1</option>
+							<option th:value = "JSS2">JSS2</option>
+							<option th:value = "JSS3">JSS3</option>
+							<option th:value = "SSS1">SSS1</option>
+							<option th:value = "SSS2">SSS2</option>
+							<option th:value = "SSS3">SSS3</option>
+							
+						</select>
 					
 					</div>
+					
 					
 					<div class="col-md-8" style = "display:flex; 
 						flex-direction:row; ">
 					
-						<label style = "min-width:120px;">Email Address</label>
-						<input type = "text" style = "min-width:200px; flex-grow:1; flex-shrink:1;
+						<label for = "emailAddress" style = "min-width:120px;">Email Address</label>
+						<input type = "text" name = "email" id = "emailAddress" style = "min-width:200px; flex-grow:1; flex-shrink:1;
 						flex-basis:auto;"/>
 					
 					</div>
@@ -92,8 +109,8 @@
 					<div class="col-md-12" style = "display:flex; 
 						flex-direction:row; ">
 					
-						<label style = "min-width:100px;">Address</label>
-						<input type = "text" style = "min-width:200px; flex-grow:1; flex-shrink:1;
+						<label for = "address" style = "min-width:100px;">Address</label>
+						<input type = "text" name = "address" id = "address" style = "min-width:200px; flex-grow:1; flex-shrink:1;
 						flex-basis:auto;"/>
 					
 					</div>
@@ -107,8 +124,8 @@
 					<div class="col-md-4" style = "display:flex; 
 						flex-direction:row; ">
 					
-						<label style = "min-width:100px;">Phone</label>
-						<input type = "text" style = "min-width:200px; flex-grow:1; flex-shrink:1;
+						<label for = "phone" style = "min-width:100px;">Phone</label>
+						<input type = "text" name = "phone" id = "phone" style = "min-width:200px; flex-grow:1; flex-shrink:1;
 						flex-basis:auto;"/>
 					
 					</div>
@@ -116,21 +133,13 @@
 					<div class="col-md-4" style = "display:flex; 
 						flex-direction:row; ">
 					
-						<label style = "min-width:100px;">D.O.B.</label>
-						<input type = "date" style = "min-width:200px; flex-grow:1; flex-shrink:1;
+						<label for = "date" style = "min-width:100px;">D.O.B.</label>
+						<input type = "date" name = "dateOfBirth" id = "date" style = "min-width:200px; flex-grow:1; flex-shrink:1;
 						flex-basis:auto;"/>
 					
 					</div>
 					
-					<div class="col-md-4" style = "display:flex; 
-						flex-direction:row; ">
 					
-						<label style = "min-width:100px;">Class</label>
-						<input type = "text" style = "min-width:190px; flex-grow:1; flex-shrink:1;
-						flex-basis:auto;"/>
-					
-					</div>
-
 				</div>
 				
 				
@@ -139,7 +148,7 @@
 
 			</div>
 			
-			<legend>Guardian Information</legend>
+			<legend><strong>Guardian Information</strong></legend>
 			
 			<div class = "container my-5">
 			
@@ -148,8 +157,8 @@
 					<div class = "col-md-6" style = "display:flex; 
 						flex-direction:row; ">
 					
-						<label style = "min-width:100px;" >Name</label>
-						<input type = "text" style = "min-width:200px; flex-grow:1; flex-shrink:1;
+						<label  for = "guardianName" style = "min-width:100px;" >Name</label>
+						<input type = "text" name = "guardianName" id = "guardianName" style = "min-width:200px; flex-grow:1; flex-shrink:1;
 						flex-basis:auto;"/>
 					
 					</div>
@@ -157,8 +166,8 @@
 					<div class = "col-md-6" style = "display:flex; 
 						flex-direction:row; ">
 					
-						<label style = "min-width:100px;" >Email</label>
-						<input type = "text" style = "min-width:200px; flex-grow:1; flex-shrink:1;
+						<label for = "guardianEmail" style = "min-width:100px;" >Email</label>
+						<input type = "text" name = "guardianEmail" id = "guardianEmail" style = "min-width:200px; flex-grow:1; flex-shrink:1;
 						flex-basis:auto;"/>
 					
 					</div>
@@ -171,8 +180,8 @@
 					<div class = "col-md-4" style = "display:flex; 
 						flex-direction:row; ">
 					
-						<label style = "min-width:100px;" >Phone</label>
-						<input type = "text" style = "min-width:200px; flex-grow:1; flex-shrink:1;
+						<label for = "guardianPhone" style = "min-width:100px;" >Phone</label>
+						<input type = "text" name = "guardianPhone" id = "guardianPhone" style = "min-width:200px; flex-grow:1; flex-shrink:1;
 						flex-basis:auto;"/>
 					
 					</div>
@@ -180,8 +189,8 @@
 					<div class = "col-md-8" style = "display:flex; 
 						flex-direction:row; ">
 					
-						<label style = "min-width:100px;" >Address</label>
-						<input type = "text" style = "min-width:200px; flex-grow:1; flex-shrink:1;
+						<label for = "guardianAddress" style = "min-width:100px;" >Address</label>
+						<input type = "text" name = "guardianAddress" id = "guardianAddress" style = "min-width:200px; flex-grow:1; flex-shrink:1;
 						flex-basis:auto;"/>
 					
 					</div>

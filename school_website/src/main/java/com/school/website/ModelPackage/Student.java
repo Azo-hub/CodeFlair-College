@@ -26,6 +26,7 @@ public class Student {
 	private String studentID;
 	private String firstName;
 	private String lastName;
+	private String otherName;
 
 	@Column(name = "email", nullable = false, updatable = false)
 	private String email;
@@ -45,5 +46,6 @@ public class Student {
 	private String guardianPhone;
 	private String guardianAddress;
 	
-
+	
+	
 }
