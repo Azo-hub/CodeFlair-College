@@ -1,10 +1,12 @@
-package com.school.website.ServicePackage;
+package com.school.website.UserPortalServicePackage;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.school.website.ModelPackage.Student;
-import com.school.website.RepositoryPackage.StudentRepository;
+import com.school.website.UserPortalRepositoryPackage.StudentRepository;
+
+
 
 @Service
 public class StudentServiceImpl implements StudentService {

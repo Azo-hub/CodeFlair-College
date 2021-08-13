@@ -1,4 +1,4 @@
-package com.school.website.ServicePackage;
+package com.school.website.UserPortalServicePackage;
 
 import com.school.website.ModelPackage.Student;
 

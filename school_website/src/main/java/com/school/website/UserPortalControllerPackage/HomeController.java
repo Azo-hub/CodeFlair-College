@@ -1,4 +1,4 @@
-package com.school.website.ControllerPackage;
+package com.school.website.UserPortalControllerPackage;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
