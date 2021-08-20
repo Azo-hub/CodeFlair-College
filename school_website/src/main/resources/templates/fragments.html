@@ -62,9 +62,23 @@
 			id = "navTop" style="background-color: #488738 !important; overflow: hidden; 
 			 width: 100% !important; z-index:3; ">
   		<div class="container-fluid">
-    		<a class="navbar-brand custom_navbar_font_size" href="/" style="font-family: 'Montserrat', sans-serif; 
+  		
+  			<!-- Start of User Portal Brand name and Logo -->
+  			
+    		<a th:if = "${User_Portal}" class="navbar-brand custom_navbar_font_size" th:href="@{/}" style="font-family: 'Montserrat', sans-serif; 
     		text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 1); 
     		color: white; font-size:25px; "><b>CodeFlair College</b></a>
+    		
+    		<!-- End of User Portal Brand name and Logo -->
+    		
+    		
+    		<!-- Start of Admin Portal Brand name and Logo -->
+    		
+    		<a th:if = "${Admin_Portal}" class="navbar-brand custom_navbar_font_size" th:href="@{/adminportal}" style="font-family: 'Montserrat', sans-serif; 
+    		text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 1); 
+    		color: white; font-size:25px; "><b>CodeFlair College</b></a>
+    		
+    		<!-- End of Admin Portal Brand name and Logo -->
     		
     		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       		<span class="navbar-toggler-icon"></span>
@@ -73,8 +87,21 @@
     		<div class="collapse navbar-collapse" id="navbarSupportedContent">
       			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         			<li class="nav-item animate__animated" id = "animationhome" style = "animation-iteration-count:1;">
-          				<a class="nav-link active" aria-current="true" href="/" style="font-family: 'Montserrat', sans-serif; 
+        				
+        				<!-- Start of User Portal Home -->
+        				
+          				<a th:if = "${User_Portal}" class="nav-link active" aria-current="true" th:href="@{/}" style="font-family: 'Montserrat', sans-serif; 
           				text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 1); color: white;"><b>Home</b></a>
+          				
+          				<!-- End of User Portal Home -->
+          				
+          				<!-- Start of Admin Portal Home -->
+          					
+          					<a th:if = "${Admin_Portal}" class="nav-link active" aria-current="true" th:href="@{/adminportal}" style="font-family: 'Montserrat', sans-serif; 
+          						text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 1); color: white;"><b>Home</b></a>
+          					
+          				<!-- End of Admin Portal Home -->
+          				
         			</li>
         			
         			
@@ -91,13 +118,20 @@
 
 					<li class="nav-item animate__animated" id = "animationContact" style = "animation-iteration-count:1;"><a class="nav-link" href="/contact"
 						style="color: white;"><b>Staff Portal</b></a></li>
+					<li class="nav-item animate__animated" id = "animationContact" style = "animation-iteration-count:1;"><a class="nav-link" href="/contact"
+						style="color: white;"><b>News and Event</b></a></li>
+					
 						
 					
       			</ul>
     
     		</div>
   		</div>
+  		
+  		
 	</nav>
+	
+	
 		
 		<!-- End of Navbar -->
 		

@@ -26,6 +26,7 @@
 						<tr>
 							<th style="text-align: center;"><input
 								th:id="selectAllStudents" type="checkbox" /></th>
+							<th scope="col">Student's ID</th>
 							<th scope="col">Name</th>
 							<th scope="col">Email Address</th>
 							<th scope="col">Date of Birth</th>
@@ -41,6 +42,7 @@
 								name="id" th:value="${student.id}" /> <input
 								th:id="'selected' + ${student.id}" class="checkboxStudent"
 								type="checkbox" /></td>
+							<td th:text="${student.studentID}"></td>
 							<td scope = "row"><a href="#"><span
 									th:text="${student.firstName} + ' ' + ${student.lastName} + ' ' + ${student.otherName}"></span></a></td>
 							<td th:text="${student.email}"></td>
@@ -51,9 +53,11 @@
 							<td>
 								<!-- <input hidden = "hidden" name = "id" th:value = "${student.id}"/>
       	<button th:id = "'oneStudent-' + ${student.id}" class = "btn btn-danger btn-xs delete-student" type = "submit" value = "delete">
-      	<span class = "fa fa-times"></span>Delete</button>  --> <a
+      	<span class = "fa fa-times"></span>Delete</button>  --> <pre><a
 								href="#" class="btn btn-danger btn-md"><span
-									class="fa fa-times"></span> Delete</a>
+									class="fa fa-pencil"></span> Edit</a>  <a
+								href="#" class="btn btn-danger btn-md"><span
+									class="fa fa-times"></span> Delete</a></pre>
 							</td>
 						</tr>
 

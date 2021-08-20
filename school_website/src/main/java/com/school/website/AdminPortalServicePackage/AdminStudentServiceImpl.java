@@ -22,5 +22,26 @@ public class AdminStudentServiceImpl implements AdminStudentService {
 
 	}
 	
+	@Override
+	public void createStudentID (Student student) {
+		
+		student.setStudentID("CDF" + "-" + student.getId());
+		adminStudentRepository.save(student);
+
+	}
+
+	@Override
+	public Student findByEmail(String email) {
+		// TODO Auto-generated method stub
+		return adminStudentRepository.findByEmail(email);
+	}
+
+	@Override
+	public Student findByDateOfBirth(String dateOfBirth) {
+		// TODO Auto-generated method stub
+		return adminStudentRepository.findByDateOfBirth(dateOfBirth);
+	}
+
+	
 
 }

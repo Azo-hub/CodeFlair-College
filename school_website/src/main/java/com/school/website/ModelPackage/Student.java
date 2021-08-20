@@ -32,6 +32,8 @@ public class Student {
 	private String email;
 	private String phone;
 	private String address;
+	
+	@Column(name = "dateOfBirth", nullable = false, updatable = true)
 	private String dateOfBirth;
 	private String studentClass;
 	private boolean enabled = true;

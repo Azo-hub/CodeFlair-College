@@ -12,4 +12,8 @@ public interface AdminStudentRepository extends JpaRepository<Student, Long> {
 
 	Student findByStudentID(String studentID);
 
+	Student findByEmail(String email);
+
+	Student findByDateOfBirth(String dateOfBirth);
+
 }
