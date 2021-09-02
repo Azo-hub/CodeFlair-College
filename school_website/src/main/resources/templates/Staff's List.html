@@ -5,7 +5,7 @@
 <head th:replace="fragments::html_head" />
 
 
-<title>CodeFlair College || Students</title>
+<title>CodeFlair College || Staff</title>
 
 <link th:href="@{/CSS/home.css}" type="text/css" rel="stylesheet" />
 
@@ -26,36 +26,33 @@
 						<tr>
 							<th style="text-align: center;"><input
 								th:id="selectAllStudents" type="checkbox" /></th>
-							<th scope="col">Student's ID</th>
+							<th scope="col">Staff ID</th>
 							<th scope="col">Name</th>
 							<th scope="col">Email Address</th>
 							<th scope="col">Date of Birth</th>
 							<th scope="col">Gender</th>
-							<th scope="col">Class</th>
 							<th scope="col">Active</th>
 							<th scope="col">Operation</th>
 							
 						</tr>
 					</thead>
 					<tbody>
-						<tr data-th-each="student:${studentList}">
+						<tr data-th-each="staff:${staffList}">
 
 							<td style="text-align: center;"><input hidden="hidden"
-								name="id" th:value="${student.id}" /> <input
-								th:id="'selected' + ${student.id}" class="checkboxStudent"
+								name="id" th:value="${staff.id}" /> <input
+								th:id="'selected' + ${staff.id}" class="checkboxStaff"
 								type="checkbox" /></td>
-							<td th:text="${student.studentID}"></td>
+							<td th:text="${staff.staffID}"></td>
 							<td scope = "row"><a href="#"><span
-									th:text="${student.firstName} + ' ' + ${student.lastName} + ' ' + ${student.otherName}"></span></a></td>
-							<td th:text="${student.email}"></td>
-							<td th:text="${student.dateOfBirth}"></td>
-							<td th:text="${student.gender}"></td>
-							<td th:text="${student.studentClass}"></td>
-
-							<td th:text="${student.enabled}"></td>
+									th:text="${staff.firstName} + ' ' + ${staff.lastName} + ' ' + ${staff.otherName}"></span></a></td>
+							<td th:text="${staff.email}"></td>
+							<td th:text="${staff.dateOfBirth}"></td>
+							<td th:text="${staff.gender}"></td>
+							<td th:text="${staff.enabled}"></td>
 							<td>
-								<!-- <input hidden = "hidden" name = "id" th:value = "${student.id}"/>
-      	<button th:id = "'oneStudent-' + ${student.id}" class = "btn btn-danger btn-xs delete-student" type = "submit" value = "delete">
+								<!-- <input hidden = "hidden" name = "id" th:value = "${staff.id}"/>
+      	<button th:id = "'oneStaff-' + ${staff.id}" class = "btn btn-danger btn-xs delete-staff" type = "submit" value = "delete">
       	<span class = "fa fa-times"></span>Delete</button>  --> <pre><a
 								href="#" class="btn btn-danger btn-md"><span
 									class="fa fa-pencil"></span> Edit</a>  <a

@@ -5,7 +5,7 @@
 <head th:replace="fragments::html_head" />
 
 
-<title>CodeFlair College</title>
+<title>CodeFlair College || AdminHome</title>
 
 <link th:href="@{/CSS/home.css}" type="text/css" rel="stylesheet" />
 
@@ -17,62 +17,147 @@
 	<h1 align="center" class="my-2 custom_font_color_1">
 		<strong>Admin Portal</strong>
 	</h1>
-
+	
+	
 	<div class="container my-5">
 
 		<div class="row">
 
 			<div class="col-md-4">
 
-				<div class="card" style="width: 100%;">
-					<ul class="list-group list-group-flush">
+				<div class="card"
+					style="width: 100%; color: white; background-color: #488738;">
 
-						<li class="list-group-item card-header"
-							style="color: white; background-color: #488738;">Student's
-							Portal</li>
+					<div class="card-body">
 
-						<li class="list-group-item custom_font_color_1"><a
-							th:href="@{/adminportal/new_students_enrollment}"
-							style="text-decoration: none; color: inherit;"> New Student's
-								Enrollment</a></li>
-						<li class="list-group-item custom_font_color_1"><a
-							th:href="@{/adminportal/view_students_list}"
-							style="text-decoration: none; color: inherit;">View
-							Student's List</a></li>
+						<h3 class="card-title">
+							<strong>Students</strong>
+						</h3>
 
-					</ul>
+						<div class="row">
+
+							<div class="col-md-6" align="center">
+
+								<h2>0</h2>
+								<h5>Male</h5>
+
+							</div>
+
+							<div class="col-md-6" align="center">
+
+								<h2>0</h2>
+								<h5>Female</h5>
+
+							</div>
+
+						</div>
+
+
+					</div>
+
+					<div class="card-body">
+
+						<div class="row">
+
+							<div class="col-md-6" align="center">
+
+								<a th:href="@{/adminportal/new_students_enrollment}"
+									style="text-decoration: none; color: inherit;"> New
+									Student's Enrollment</a>
+
+							</div>
+
+							<div class="col-md-6" align="center">
+
+								<a th:href="@{/adminportal/view_students_list}"
+									style="text-decoration: none; color: inherit;">View
+									Student's List</a>
+
+							</div>
+
+						</div>
+
+
+
+					</div>
 				</div>
-
-
 
 			</div>
 
 
 			<div class="col-md-4">
 
-				<div class="card" style="width: 100%;">
+				<div class="card"
+					style="width: 100%; color: white; background-color: #488738;">
 
-					<ul class="list-group list-group-flush">
+					<div class="card-body">
 
-						<li class="list-group-item card-header"
-							style="color: white; background-color: #488738;">Staff
-							Portal</li>
+						<h3 class="card-title">
+							<strong>Staff</strong>
+						</h3>
 
-						<li class="list-group-item custom_font_color_1"><a
-							style="text-decoration: none; color: inherit;"> New Staff
-								Enrollment</a></li>
+						<div class="row">
 
-						<li class="list-group-item custom_font_color_1">View Staff
-							List</li>
+							<div class="col-md-6" align="center">
+
+								<h2>0</h2>
+								<h5>Male</h5>
+
+							</div>
+
+							<div class="col-md-6" align="center">
+
+								<h2>0</h2>
+								<h5>Female</h5>
+
+							</div>
+
+						</div>
 
 
-					</ul>
+					</div>
 
+					<div class="card-body">
+
+						<div class="row">
+
+							<div class="col-md-6" align="center">
+
+								<a th:href="@{/adminportal/new_staff_enrollment}"
+									style="text-decoration: none; color: inherit;"> New Staff
+									Enrollment</a>
+
+							</div>
+
+							<div class="col-md-6" align="center">
+
+								<a th:href="@{/adminportal/view_staff_list}"
+									style="text-decoration: none; color: inherit;">View Staff
+									List</a>
+
+							</div>
+
+						</div>
+
+
+
+					</div>
 				</div>
+
 
 			</div>
 
-			<div class="col-md-4"></div>
+			<div class="col-md-4">
+			
+				<div class="card" style="width: 100%; color: white; background-color: #488738;">
+  					<ul class="list-group list-group-flush" >
+   	 					<li class="list-group-item" style="color: inherit; background-color: inherit;">Admission</li>
+    					<li class="list-group-item" style="color: inherit; background-color: inherit;">News and Events</li>
+    					<li class="list-group-item" style="color: inherit; background-color: inherit;">About Us</li>
+  					</ul>
+				</div>
+			
+			</div>
 
 
 		</div>

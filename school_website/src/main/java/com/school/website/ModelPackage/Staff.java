@@ -26,11 +26,18 @@ public class Staff {
 	private String staffID;
 	private String firstName;
 	private String lastName;
+	private String otherName;
+	
+	@Column(name = "gender", nullable = false, updatable = true)
+	private String gender;
 
 	@Column(name = "email", nullable = false, updatable = false)
 	private String email;
 	private String phone;
 	private String address;
+	
+	@Column(name = "dateOfBirth", nullable = false, updatable = true)
+	private String dateOfBirth;
 	private boolean enabled = true;
 
 	@Transient

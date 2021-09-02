@@ -27,6 +27,9 @@ public class Student {
 	private String firstName;
 	private String lastName;
 	private String otherName;
+	
+	@Column(name = "gender", nullable = false, updatable = true)
+	private String gender;
 
 	@Column(name = "email", nullable = false, updatable = false)
 	private String email;
